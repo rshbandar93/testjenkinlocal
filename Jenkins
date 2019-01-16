@@ -1,0 +1,23 @@
+pipeline {
+    agent none
+    stages {
+        stage('Build') {
+            agent any
+            steps {
+                sh 'pip3.6 install -r requirements.txt'
+            }
+        }
+
+
+    }
+     stages {
+        stage('test') {
+            agent any
+            steps {
+                sh 'ls'
+            }
+        }
+
+
+    }
+}
